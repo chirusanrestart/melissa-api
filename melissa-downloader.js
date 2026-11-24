@@ -33,7 +33,7 @@ function loadEnv(file = ".env") {
 
 const env = loadEnv();
 
-const API_URL = (env.API_URL || "").replace(/\/+$/, "");
+const API_URL = "https://melissa-api-server.hostless.app";
 const API_KEY = env.API_KEY || "";
 
 const DEFAULT_DOWNLOADS = env.DOWNLOADS_DIR || "./downloads";
@@ -121,9 +121,9 @@ function uniquePath(filePath) {
 }
 
 function ensureConfig() {
-  if (!API_URL || !API_KEY) {
+  if (!API_KEY) {
     console.log("\n❌ Configuração incompleta.");
-    console.log("Edite o arquivo .env e preencha API_URL e API_KEY.\n");
+    console.log("Edite o arquivo .env e preencha API_KEY.\n");
     return false;
   }
 
