@@ -24,7 +24,7 @@ cp .env.example .env
 nano .env
 ```
 
-Preencha `API_KEY` com sua chave. O endereço da API já está preenchido no exemplo, mas pode ser alterado se necessário.
+Preencha `API_KEY` com sua chave. O endereço da API está fixado diretamente no código, em `melissa-downloader.js`.
 
 Inicie o painel:
 
@@ -55,6 +55,8 @@ downloads/
 Os caminhos podem ser personalizados no arquivo `.env`.
 
 ## Configuração da API
+
+O endereço base da API está hardcoded no arquivo `melissa-downloader.js`. Para alterá-lo, edite a constante `API_URL` nesse arquivo.
 
 O cliente envia:
 
